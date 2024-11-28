@@ -5,7 +5,7 @@ increase = 0.05  # Ежемесячный рост цен
 month = 0
 
 max_months = 12  
-    while month < max_months and (money_capital + salary) > spend:
+    (money_capital + salary) >= spend:
     month += 1
     money_capital = money_capital + salary - spend
     spend = spend + (spend * increase)
