@@ -1,5 +1,7 @@
+import json
 def task() -> float:
-    numbers = [1.5, 2.5, 3.0, 4.5]
-    return sum(numbers) / len(numbers)
-
+    with open('input.json', 'r') as j:
+data = json.load(j)
+total = sum(d["score"] * d["weight"] for d in data)
+return rouns(total, 3)
 print(task())
